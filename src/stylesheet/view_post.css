@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Varela&display=swap');
 * {
     font-family: 'Cairo', sans-serif;
+
 }
+body{
+    background: #fff !important;
+  }
 .card {
     position: relative;
     display: -webkit-box;
@@ -38,6 +42,7 @@ font-weight: 900;
 }
 
 .view-comments{
+    margin-left: 1.25rem !important;
     color: #fff;
     background-color: #007bff;
     border-color: #007bff;
@@ -58,7 +63,11 @@ font-weight: 900;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
-.delete-comments{
+.update-posts{
+    background-color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+}
+.delete-comments,.update-posts{
     color: #fff;
     background-color: #dc3545;
     border-color: #dc3545;
@@ -79,3 +88,72 @@ font-weight: 900;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+/*paper design */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Handlee);
+
+
+.paper {
+    margin-left: 1.25rem !important;
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    min-width: 400px;
+    height: 480px;
+    margin: 0 auto;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    overflow: hidden;
+}
+.paper:before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 60px;
+    background: radial-gradient(#575450 6px, transparent 7px) repeat-y;
+    background-size: 30px 30px;
+    border-right: 3px solid #D44147;
+    box-sizing: border-box;
+}
+
+.paper-content {
+    position: absolute;
+    top: 30px; right: 0; bottom: 30px; left: 60px;
+    background: linear-gradient(transparent, transparent 28px, #91D1D3 28px);
+    background-size: 30px 30px;
+}
+
+.paper-content textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    line-height: 30px;
+    padding: 0 10px;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: mediumblue;
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+    font-size: 18px;
+    box-sizing: border-box;
+    z-index: 1;
+}
+/*update input type example */
+.cool-one {
+    width: 250px;
+    border: 1px solid #3D484C;
+    background: #2D3538;
+    margin: 0 0 5px;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    padding-right: 30px;
+    color: #DDD;
+    }
+    .valid {
+    background: #2D3538 url(http://picbox.im/image/cba14e57f0-validicon.png) no-repeat 99% 50%;
+    background-position: right 6px center;
+    }
