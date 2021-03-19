@@ -16,6 +16,28 @@ export default function(state = initialState, action){
 
 
         }
+        case 'DELETE_POSTS':
+        return {
+            ...state,
+            posts:action.payload,
+
+
+        }
+        case 'CREATE_POSTS':
+            return {
+                ...state,
+                posts:action.payload,
+
+
+
+            }
+            case 'UPDATE_POSTS':
+                return {
+                    ...state,
+                    posts:action.payload,
+
+
+                }
         default: return state
     }
 
