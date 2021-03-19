@@ -12,9 +12,9 @@ function App() {
   return (
     <BrowserRouter>
     <nav>
-    <div class="menu-icon">
-<span class="fas fa-bars"></span></div>
-<div class="logo">
+    <div className="menu-icon">
+<span className="fas fa-bars"></span></div>
+<div className="logo">
 PostRumour</div>
 <div class="nav-items">
 
@@ -24,13 +24,13 @@ PostRumour</div>
 
 
 </div>
-<div class="search-icon">
-<span class="fas fa-search"></span></div>
-<div class="cancel-icon">
-<span class="fas fa-times"></span></div>
+<div className="search-icon">
+<span className="fas fa-search"></span></div>
+<div className="cancel-icon">
+<span className="fas fa-times"></span></div>
 <form method="POST" action="/users/search">
-      <input type="search" class="search-data" name="search" placeholder="Search Rumour" required/>
-      <button type="submit" class="fas fa-search"></button>
+      <input type="search" className="search-data" name="search" placeholder="Search Rumour" required/>
+      <button type="submit" className="fas fa-search"></button>
     </form>
 </nav>
 
