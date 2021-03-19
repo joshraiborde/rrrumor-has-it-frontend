@@ -5,7 +5,8 @@ import React from 'react';
 import { BrowserRouter,Link, Route, Switch } from 'react-router-dom';
 import Home from './components/home.js';
 import PostRumour from './components/postRumour.js';
-import MyRumour from './components/myRumour.js';
+import Splash from './components/splash.js';
+
 
 
 function App() {
@@ -20,7 +21,6 @@ PostRumour</div>
 
 <li><Link to="/home">Home</Link></li>
 <li><Link to="/post/rumour">Post Rumour</Link></li>
-<li><Link to="/my/rumour">My Rumours</Link></li>
 
 
 </div>
@@ -33,7 +33,7 @@ PostRumour</div>
       <button type="submit" className="fas fa-search"></button>
     </form>
 </nav>
-
+ <Route exact path="/" component={Splash}/>
 <Switch>
           <Route path="/home">
 <Home/>
@@ -41,9 +41,7 @@ PostRumour</div>
           <Route path="/post/rumour">
 <PostRumour/>
           </Route>
-          <Route path="/my/rumour">
-<MyRumour/>
-          </Route>
+
 
 
         </Switch>
