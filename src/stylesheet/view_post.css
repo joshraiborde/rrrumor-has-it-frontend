@@ -7,6 +7,7 @@ body{
     background: #fff !important;
   }
 .card {
+    cursor: pointer;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -40,7 +41,9 @@ body{
 font-size: large;
 font-weight: 900;
 }
-
+.no-comments{
+    margin-left: 1.25rem !important;
+}
 .view-comments{
     margin-left: 1.25rem !important;
     color: #fff;
