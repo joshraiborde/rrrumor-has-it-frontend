@@ -16,6 +16,23 @@ export const getPosts = () => async dispatch => {
 
 
 }
+export const getSinglePosts = (id) => async dispatch => {
+
+
+    const res = await axios.get(`http://localhost:3000/get/post?id=`+id)
+    dispatch( {
+        type:'GET_SINGLE_POST',
+        payload: res.data
+    })
+
+
+
+}
+
+
+
+
+
 export const deletePosts = (id) => async dispatch => {
 
 
@@ -63,4 +80,16 @@ export const updatePosts = (id,content) => async dispatch => {
 
 
 
+
 }
+export const createComments = (id,content) => async dispatch => {
+
+    const postContent = { content: content,post_id:id };
+    await axios.post(`http://localhost:3000/comments`,postContent).then((res)=>{
+        dispatch( {
+            type:'CREATE_COMMENTS',
+            payload: res.data
+        })
+    })
+    }
+
