@@ -6,6 +6,7 @@ import { BrowserRouter,Link, Route, Switch } from 'react-router-dom';
 import Home from './components/home.js';
 import PostRumour from './components/postRumour.js';
 import Splash from './components/splash.js';
+import Comments from './components/postComment';
 
 
 
@@ -16,7 +17,7 @@ function App() {
     <div className="menu-icon">
 <span className="fas fa-bars"></span></div>
 <div className="logo">
-PostRumour</div>
+Rumour Has It...</div>
 <div class="nav-items">
 
 <li><Link to="/home">Home</Link></li>
@@ -24,14 +25,8 @@ PostRumour</div>
 
 
 </div>
-<div className="search-icon">
-<span className="fas fa-search"></span></div>
-<div className="cancel-icon">
-<span className="fas fa-times"></span></div>
-<form method="POST" action="/users/search">
-      <input type="search" className="search-data" name="search" placeholder="Search Rumour" required/>
-      <button type="submit" className="fas fa-search"></button>
-    </form>
+
+
 </nav>
  <Route exact path="/" component={Splash}/>
 <Switch>
@@ -40,6 +35,9 @@ PostRumour</div>
           </Route>
           <Route path="/post/rumour">
 <PostRumour/>
+          </Route>
+          <Route path="/comments">
+<Comments/>
           </Route>
 
 
