@@ -3,9 +3,9 @@ import '../stylesheet/splash.css';
 export default function myRumours() {
   return (
 <div class="welcome">
-<div id = "quote"> Welcome to my Blog
+<div id = "quote"> Rumour Has It
 
-  <p>Welcome <span class="redText">to</span> my blog.</p>
+  <p>Welcome <span class="redText">to</span> Rumour Has It...</p>
   </div>
     </div>
   )

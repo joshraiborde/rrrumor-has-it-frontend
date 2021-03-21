@@ -51,7 +51,7 @@ this.setState({value: a});
     }
   updatePostsFunction(id){
     if(!this.state.value[id]){
-      alert("Please Enter a value to update")
+      alert("Slot cannot be empty to Update Rumour")
     }
     else{
 
@@ -80,21 +80,21 @@ this.setState({value: a});
     return (
 
       <div>
-            <h1 className="view-posts">View Posts</h1>
+            <h1 className="view-posts">Rumours</h1>
         {posts.map((data, key) => {
             return (
               <div key={key}>
 <div  className="card">
   <div className="card-body">
     {/* <h1 className="post-id">Post Id:{data.data.id}</h1> */}
-    <h4 className="view-content">Content: {data.data.attributes.content}</h4>
+    <h4 className="view-content">Rumour: {data.data.attributes.content}</h4>
 
-    <input id={data.data.id} type="text" placeholder="Please Update a Post" value={this.state.value[data.data.id]}
+    <input id={data.data.id} type="text" placeholder="Type here to Update Rumour" value={this.state.value[data.data.id]}
         onChange={this.handleChange.bind(this, data.data.id)}  class="cool-one valid"></input>
     <br/>
-    <button onClick={() => this.updatePostsFunction(data.data.id)} className="update-posts">Update Posts</button>
+    <button onClick={() => this.updatePostsFunction(data.data.id)} className="update-posts">Update Rumour</button>
     &nbsp;&nbsp;&nbsp;&nbsp;
-    <button onClick={() => this.deletePostsFunction(data.data.id)} className="delete-comments">Delete Posts</button>
+    <button onClick={() => this.deletePostsFunction(data.data.id)} className="delete-comments">Delete Rumour</button>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <button onClick={this.changeLocation.bind(this,data.data.id)} className="update-posts">Comment</button>
 

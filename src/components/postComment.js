@@ -52,11 +52,11 @@ class PostComment extends React.Component {
 
       return (<div>
      <div> <div > <div  className="card"> <div className="card-body">
-          <h1 className="post-id">Post Id:{posts.data.id}</h1>
+          {/* <h1 className="post-id">Post Id:{posts.data.id}</h1> */}
           <input  type="text" placeholder="Please write a Comment"
         onChange={this.handleChange.bind()}  value={this.state.value} class="cool-one valid"></input>
-          <h4 className="view-content">Content:{posts.data.attributes.content}</h4> <br/>
-           <button onClick={() => this.PostComment(posts.data.id,this.state.value)}  className="delete-comments">Posts A comment</button> </div> </div>
+          <h4 className="view-content">Rumour: {posts.data.attributes.content}</h4> <br/>
+           <button onClick={() => this.PostComment(posts.data.id,this.state.value)}  className="delete-comments">Posts A Comment</button> </div> </div>
             <br/> </div> </div>
             <br/>
             <br/>

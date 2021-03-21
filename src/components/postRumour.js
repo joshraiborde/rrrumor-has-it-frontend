@@ -8,7 +8,7 @@ class PostRumour extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'Please Enter a Rumour'
+      value: "Enter a Rumour here..."
     };
     this.handleChange = this.handleChange.bind(this);
 
@@ -26,18 +26,18 @@ class PostRumour extends React.Component {
   }
   render() {
    return(<div>
-   <h1 className="view-posts">Create a Rumour</h1>
+   <h1 className="view-posts">Post a Rumour</h1>
 
    <div className="paper">
     <div className="paper-content">
-        <textarea value={this.state.value}
+        <textarea placeholder="Enter Rumour Here..."
         onChange={this.handleChange} autoFocus/>
     </div>
 </div>
      <br/>
 
 
-     <button onClick={() => this.createPostsFunction(this.state.value)} className="view-comments">Create Posts</button>
+     <button onClick={() => this.createPostsFunction(this.state.value)} className="view-comments">Create Rumour</button>
    <br/>
    <br/>
    <br/>
