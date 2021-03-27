@@ -57,7 +57,7 @@ class PostComment extends React.Component {
                                     value={this.state.value} class="cool-one valid"></input>
                                 <br/>
                                 <button onClick={() => this.PostComment(posts.data.id,this.state.value)}
-                                        className="delete-comments">Posts A comment</button>
+                                        className="delete-comments">Post A Comment</button>
                                 </div>
                         </div>
 
