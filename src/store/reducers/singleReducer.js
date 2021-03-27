@@ -1,5 +1,3 @@
-
-
 const initialState = {
     posts:[],
     loading:true
@@ -11,16 +9,12 @@ export default function(state = initialState, action){
             return {
                 ...state,
                 posts:action.payload,
-
-
             }
-            case 'CREATE_COMMENTS':
-                return {
-                    ...state,
-                    posts:action.payload,
-
-
+        case 'CREATE_COMMENTS':
+            return {
+                ...state,
+                posts:action.payload,
                 }
-            default: return state
+        default: return state
     }
 }
