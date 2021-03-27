@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {getPosts} from '../store/actions/postsAction'
 import {deletePosts} from '../store/actions/postsAction'
 import {updatePosts} from '../store/actions/postsAction'
-import Comment from './postComment';
+import Comment from './PostComment';
 class Home extends React.Component {
   constructor() {
     super();
@@ -33,7 +33,7 @@ class Home extends React.Component {
 
   updatePostsFunction(id){
     if(!this.state.value[id]){
-      alert("Please Enter a value to update")
+      alert("Update field cannot be blank to update")
     }
     else{
    this.props.updatePosts(id,this.state.value[id]);

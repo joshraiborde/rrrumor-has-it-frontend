@@ -2,10 +2,10 @@ import './App.css';
 import './stylesheet/navbar.css'
 import React from 'react';
 import { BrowserRouter,Link, Route, Switch } from 'react-router-dom';
-import Home from './components/home.js';
-import PostRumour from './components/postRumour.js';
-import Splash from './components/splash.js';
-import Comments from './components/postComment';
+import Home from './components/Home.js';
+import PostRumour from './components/PostRumour.js';
+import Splash from './components/Splash.js';
+import Comments from './components/PostComment';
 
 function App() {
   return (
@@ -21,8 +21,8 @@ function App() {
                 </nav>
       <Route exact path="/" component={Splash}/>
         <Switch>
-          <Route path="/home" render={(props) => <Home {...props} key={Date.now()}/>}>
-          </Route><Route path="/post/rumour"><PostRumour/></Route>
+          <Route path="/home" render={(props) => <Home {...props} key={Date.now()}/>}></Route>
+          <Route path="/post/rumour"><PostRumour/></Route>
           <Route path="/comments"><Comments/></Route>
         </Switch>
       </BrowserRouter>
