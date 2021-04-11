@@ -6,7 +6,7 @@ export default function contactUs() {
 <div class="about-section">
   <h1>Contact Us Page</h1>
   <p class="remove-margin">Please Contact us:</p>
-  <p class="remove-margin">Our Email: BlaBlaBla@gmail.com</p>
+  <p class="remove-margin">Email: BlaBlaBla@gmail.com</p>
 </div>
 </div>
   )
