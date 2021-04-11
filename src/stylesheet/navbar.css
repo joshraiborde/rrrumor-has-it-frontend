@@ -238,3 +238,8 @@ nav .logo.space{
 .content .space{
   margin: 10px 0;
 }
+.enter-number{
+     margin-left: 1.25rem ;
+     margin-top: 1rem;
+     border-radius: 10px;
+}
