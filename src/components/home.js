@@ -13,18 +13,40 @@ class Home extends React.Component {
     this.deletePostsFunction = this.deletePostsFunction.bind(this);
     this.updatePostsFunction = this.updatePostsFunction.bind(this);
     this.commentFunction = this.commentFunction.bind(this);
+    this.likeNumber = this.likeNumber.bind(this);
+    this.increaseLike = this.increaseLike.bind(this);
 
     this.state = {
       value: [],
-      componentValue:0,
-      id:0,
+      componentValue: 0,
+      id: 0,
+      valueOfLikes: 0,
+      totalLikes:[],
     };
   }
 
   componentDidMount() {
     this.props.getPosts();
   }
+  increaseLike(id){
+    let ids = [...this.state.totalLikes];
+    if(this.state.totalLikes[id]===undefined){
+      console.log("Undefined");
+      ids[id] = parseInt(this.state.valueOfLikes)+parseInt(0);
+    }
+    else{
+      ids[id] =  parseInt(this.state.valueOfLikes)+parseInt(this.state.totalLikes[id]);
+    }
+         // create the copy of state array
+                      //new value
+    this.setState({ totalLikes:ids });
 
+
+   }
+  likeNumber(event){
+
+   this.setState({valueOfLikes: event.target.value});
+  }
   handleChange(id,event) {
   let a = this.state.value.slice(); //creates the clone of the state
     a[id] = event.target.value;
@@ -58,10 +80,14 @@ class Home extends React.Component {
     if (getValue == 0){
     return (
       <div>
+        <input className="form-control enter-number" type="number" onChange={this.likeNumber.bind(this)}   id="inputName" placeholder="Enter Number of Likes"/>
             <h1 className="view-posts">Rumours</h1>
+
             {posts.map((data, key) => {
               return (
+
                 <div key={key}>
+
                   <div  className="card">
                     <div className="card-body">
                       {/* <h1 className="post-id">Post Id:{data.data.id}</h1> */}
@@ -78,6 +104,9 @@ class Home extends React.Component {
                           &nbsp;&nbsp;&nbsp;&nbsp;
                         <button onClick={this.commentFunction.bind(this,data.data.id)} // comment
                           className="update-posts">Comment</button>
+                           &nbsp;&nbsp;&nbsp;&nbsp;
+                           <button onClick={() => this.increaseLike(data.data.id)}
+                          className="delete-comments">Like ({this.state.totalLikes[data.data.id]})</button>
                       </div>
                   </div>
                     <br/>
