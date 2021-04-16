@@ -16,7 +16,7 @@ function App() {
   <BrowserRouter>
     <nav>
       <div className="menu-icon"> <span className="fas fa-bars"></span></div>
-          <div className="logo">Rumour Has It...</div>
+          <div className="logo">Rumour Has It . . .</div>
               <div class="nav-items">
                 <li><Link to="/home">Home</Link></li>
                 <li><Link to="/post/rumour">Post Rumour</Link></li>

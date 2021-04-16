@@ -18,9 +18,9 @@ class Home extends React.Component {
 
     this.state = {
       value: [],
-      componentValue: 0,
-      id: 0,
-      valueOfLikes: 0,
+      componentValue:0,
+      id:0,
+      valueOfLikes:0,
       totalLikes:[],
     };
   }
@@ -30,20 +30,36 @@ class Home extends React.Component {
   }
   increaseLike(id){
     let ids = [...this.state.totalLikes];
-    if(this.state.totalLikes[id]===undefined){
-      console.log("Undefined");
-      ids[id] = parseInt(this.state.valueOfLikes)+parseInt(0);
-    }
-    else{
-      ids[id] =  parseInt(this.state.valueOfLikes)+parseInt(this.state.totalLikes[id]);
+
+
+        if(this.state.totalLikes[id]==undefined){
+          ids[id] =  parseInt(this.state.valueOfLikes)+parseInt(0);
+        }
+        else{
+          if(this.state.valueOfLikes==undefined || this.state.valueOfLikes==''){
+            ids[id] =  parseInt(0)+parseInt(this.state.totalLikes[id]);
+          }
+          else{
+            console.log("executed "+this.state.valueOfLikes);
+            ids[id] =  parseInt(this.state.valueOfLikes)+parseInt(this.state.totalLikes[id]);
+          }
+
+        }
+
+
+        this.setState({ totalLikes:ids });
+
     }
          // create the copy of state array
                       //new value
-    this.setState({ totalLikes:ids });
 
 
-   }
+
+
   likeNumber(event){
+    if(event.target.value==undefined || event.target.value==null){
+      this.setState({valueOfLikes: 0});
+    }
 
    this.setState({valueOfLikes: event.target.value});
   }

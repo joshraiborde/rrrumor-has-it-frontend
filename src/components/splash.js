@@ -6,7 +6,7 @@ export default function myRumours() {
 <div id = "quote">
 
   <p>Welcome to
-    <span class="redText">Rumour Has It...</span>
+    <span class="redText"> Rumour Has It...</span>
   </p>
   </div>
     </div>
